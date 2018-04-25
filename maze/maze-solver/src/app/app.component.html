@@ -1,0 +1,20 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header> 
+      <mat-panel-title>
+        Build Maze
+      </mat-panel-title>  
+    </mat-expansion-panel-header>
+    <router-outlet name="mazecreator"></router-outlet>   
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header> 
+      <mat-panel-title>
+        Solved Maze
+      </mat-panel-title>     
+    </mat-expansion-panel-header>
+    <router-outlet name="mazeresolver"></router-outlet>   
+  </mat-expansion-panel>
+</mat-accordion>
+

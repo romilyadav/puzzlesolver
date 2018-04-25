@@ -1,0 +1,14 @@
+<p>
+  maze-resolver works!
+</p>
+<div>
+Total Number of step: {{count}}
+</div>
+<table>
+  <tbody>
+    <tr *ngFor = "let row of solvedMaze">
+        <td *ngFor = "let field of row">{{field}}</td>
+    </tr>
+  </tbody>
+
+</table>
