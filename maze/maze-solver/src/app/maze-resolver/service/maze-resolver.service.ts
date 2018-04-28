@@ -7,8 +7,6 @@ export class MazeResolverService {
 
   private basePath = '/resolve';
 
-  result: any;
-
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json'
@@ -17,7 +15,7 @@ export class MazeResolverService {
 
   constructor(private http: HttpClient) { }
 
-  resolveMaze(maze: any) {
+  resolveMaze(maze: String[]) {
     const uri = environment.apiUrl + this.basePath;
     return this.http.post(uri, maze, this.httpOptions);
   }

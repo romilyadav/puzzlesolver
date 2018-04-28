@@ -9,18 +9,19 @@ import { MazeResolverService } from './service/maze-resolver.service';
 })
 export class MazeResolverComponent implements OnInit {
 
-  private maze;
-
   solvedMaze;
   count;
 
   constructor(private service: AppDataService, private mazeResolver: MazeResolverService) { }
 
   ngOnInit() {
-    this.maze = this.service.maze;
-    this.mazeResolver.resolveMaze(this.maze).subscribe(data => {
+    this.mazeResolver.resolveMaze(this.service.maze).subscribe(
+                                  data => {
                                   this.solvedMaze = data['maze'];
                                   this.count = data['count'];
+                                },
+                                error => {
+                                  console.log('Back end returned an error');
                                 });
   }
 

@@ -1,11 +1,8 @@
 <div>
-  <mat-form-field>
-    <input matInput placeholder="Number of rows">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Number of columns">
-  </mat-form-field>
+ 
+  <input type="file" (change) = "createMaze($event)" id="fileinput">
+
 </div>
-<button mat-raised-button color="primary">Create Maze</button>
+<br>
+<br>
 <button mat-raised-button color="primary" (click)="solveMaze()">Solve Maze</button>
-<button mat-raised-button color="primary">Reset Maze</button>

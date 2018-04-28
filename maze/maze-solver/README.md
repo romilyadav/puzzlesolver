@@ -4,3 +4,5 @@ node server
 
 #Enter the following url in the browser
 http://localhost:3000
+
+#Click on choose file and then click on solve maze

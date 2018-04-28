@@ -10,12 +10,12 @@ module.exports = function() {
         maze = puzzle;
         rows = maze.length;
         cols = maze[0].length;
-        findStartPoint();    
+        findStartingPoint();    
         resolve(rowStart, colStart, 1);
         return {maze:maze, count:count};
     }
 
-    function findStartPoint() {
+    function findStartingPoint() {
         for (let i=0; i < rows; i++) {
             for (j=0; j < cols; j++){
                 if (maze[i][j] === 'A'){
