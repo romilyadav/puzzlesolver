@@ -19,9 +19,11 @@ export class MazeResolverComponent implements OnInit {
                                   data => {
                                   this.solvedMaze = data['maze'];
                                   this.count = data['count'];
+                                  this.service.setSolvedStatus(true);
                                 },
                                 error => {
                                   console.log('Back end returned an error');
+                                  this.service.setSolvedStatus(false);
                                 });
   }
 

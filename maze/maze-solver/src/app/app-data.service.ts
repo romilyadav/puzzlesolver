@@ -9,6 +9,14 @@ export class AppDataService {
 
   private _maze: BehaviorSubject<String[]> = new BehaviorSubject<String[]>(null);
 
+  private _solved: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+  $solved = this._solved.asObservable();
+
+  setSolvedStatus(solved: boolean){
+    this._solved.next(solved);
+  }
+
   set maze(maze: String[]) {
     this._maze.next(maze);
   }

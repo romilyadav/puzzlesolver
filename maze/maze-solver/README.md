@@ -6,3 +6,12 @@ node server
 http://localhost:3000
 
 #Click on choose file and then click on solve maze
+
+#The input file should in the format
+#,#,#,#,#,#,#,#,#,#
+#,A,.,.,.,#,.,#,.,#
+#,.,#,.,#,#,.,#,.,#
+#,.,#,.,.,.,.,#,B,#
+#,.,#,.,#,#,.,#,.,#
+#,.,.,.,.,#,.,.,.,#
+#,#,#,#,#,#,#,#,#,#

@@ -1,5 +1,5 @@
 <mat-accordion>
-  <mat-expansion-panel>
+  <mat-expansion-panel [expanded]="step===0" (opened)="setStep(0)">
     <mat-expansion-panel-header> 
       <mat-panel-title>
         Build Maze
@@ -8,8 +8,8 @@
     <router-outlet name="mazecreator"></router-outlet>   
   </mat-expansion-panel>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header> 
+  <mat-expansion-panel [expanded]="step===1" (opened)="setStep(1)"> 
+    <mat-expansion-panel-header>
       <mat-panel-title>
         Solved Maze
       </mat-panel-title>     
